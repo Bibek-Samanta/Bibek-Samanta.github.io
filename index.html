@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pranati Jana | Personal Website</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#f8f9fc;
+      color:#1b1b1b;
+      line-height:1.6;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      background:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+      position:fixed;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    nav h2{
+      color:#173f73;
+      font-size:28px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:35px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:#173f73;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#5a8dee;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      height:160vh;
+      background-image:url("pj1.jpg");
+      background-size:cover;
+      background-position:center 35%;
+      background-repeat:no-repeat;
+  
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      position:relative;
+      padding-right:3%;
+    }
+    /* Dark transparent layer */
+    .hero::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:rgba(0,0,0,0.25);
+    }
+
+    .hero-overlay{
+        position:relative;
+        z-index:2;
+        color:white;
+        max-width:500px;
+        ptext-align:left;;
+    }
+  
+    .hero-overlay h1{
+        font-size:70px;
+        margin-bottom:20px;
+    }
+    .hero-overlay p{
+    font-size:24px;
+    margin-bottom:30px;
+    }
+
+    .hero-overlay .btn{
+        border:2px solid white;
+        color:white;
+    }
+
+    .hero-overlay .btn:hover{
+        background:white;
+        color:black;
+    }
+
+
+    .btn{
+      display:inline-block;
+      width:fit-content;
+      padding:14px 30px;
+      border:2px solid #173f73;
+      text-decoration:none;
+      color:#173f73;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.3s;
+      margin-top:10px;
+    }
+
+    .btn:hover{
+      background:#173f73;
+      color:white;
+    }
+
+    /* SECTIONS */
+
+    section{
+      padding:100px 10%;
+    }
+
+    section h2{
+      font-size:40px;
+      color:#173f73;
+      margin-bottom:30px;
+      text-align:center;
+    }
+
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#173f73;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin-bottom:15px;
+      font-size:18px;
+    }
+
+    footer{
+      background:#173f73;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+      .hero{
+        grid-template-columns:1fr;
+      }
+
+      .hero-content{
+        padding:50px 30px;
+      }
+
+      .hero-content h1{
+        font-size:42px;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <h2>Pranati Jana</h2>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+  <div class="hero-overlay">
+    <h1>Pranati Jana</h1>
+
+    <p>
+      Ph.D. in Experimental High Energy Physics<br>
+      IIT Madras | CMS Collaboration, CERN
+    </p>
+
+  </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <h2>About Me</h2>
+      <p>
+        I am a particle physicist, recently completed my Ph.D. in Experimental High Energy Physics at IIT Madras, as part of the CMS Collaboration at CERN. My work spans both physics analysis and detector development, with interests in particle physics, semiconductor detectors, and machine learning applications in science. I also had the opportunity to participate in the Fermilab LPC Guest & Visitor Program, contributing to the CMS Outer Tracker Upgrade. Outside of research, I enjoy volunteering in community activities such as beach-cleaning drives and campus outreach programs. In my free time, I enjoy painting and exploring new ideas through both science and creativity.
+      </p>
+    
+  </section>
+
+  <!-- RESEARCH -->
+
+  <section id="research">
+
+    <h2>Research</h2>
+
+     <div class="research-section">
+
+    <h3>Hardware Activities</h3>
+
+    <p>
+      I have been involved in silicon detector R&D for future high-energy physics experiments. My work includes characterization of the MALTA sensor, radiation hardness studies, test beam campaigns at CERN SPS, and investigations of detector performance under various operating conditions.
+    </p>
+
+    <h3>Physics Analysis</h3>
+
+    <p>
+      I have contributed to several physics analyses within the CMS Collaboration, including measurements of the tau anomalous magnetic moment, light-by-light scattering studies, and searches for axion-like particles using ultra-peripheral PbPb collision data.
+    </p>
+
+    <h3>Machine Learning</h3>
+
+    <p>
+      I am interested in applying machine learning techniques to particle reconstruction, detector optimization, and data analysis. I am particularly interested in ML-based approaches for tau identification, particle reconstruction, and future detector applications.
+    </p>
+
+  </div>
+
+  </section>
+
+  <!-- PUBLICATIONS -->
+
+  <section id="publications">
+
+    <h2>Publications & Talks</h2>
+
+    <div class="Publications & Talks">
+
+        <h3>Publications</h3>
+        <ul class="publication-list">
+        <li>
+          CMS Collaboration, ``Measurement of light-by-light scattering and the Breit-Wheeler process, and search for axion-like particles in ultraperipheral PbPb collisions at $\sqrt{s}_{NN}$ = 5.02 TeV,". CMS Collaboration, JHEP, 2025, 6 (2025); https://doi.org/10.1007/JHEP08(2025)006.
+        </li>
+
+        <li>
+          ``Measurement of the tau g-2 factor in ultraperipheral PbPb collisions recorded by the cms experiment,"  CERN, Geneva, Tech. Rep., 2024. Available: http://cds.cern.ch/record/2912969.
+        </li>
+
+        <li>
+          ``Radiation hardness of MALTA2 monolithic CMOS imaging sensors on Czochralski substrates",Eur. Phys. J., vol. C84, p. 251, 2024. doi: https://doi.org/10.1140/epjc/s10052-024-12601-3.
+        </li>
+
+        <li>
+          CMS Collaboration, ``Luminosity calibration of 2017 XeXe collisions at 5.44 TeV," CERN-CMS-DP-2024-015. Available: https://cds.cern.ch/record/2891266?ln=en.
+        </li>
+        </ul>
+        <h3>Conferences</h3>
+        <ul class="conference-list">
+          
+      <li>
+        <strong>2026</strong> – Photon–Photon Physics in Ultra-Peripheral PbPb Collisions at CMS and my activity on Silicon Detector R&D for future detectors, LPC Physics Forum, Fermilab.
+      </li>
+
+      <li>
+        <strong>2025</strong> – Exclusive photon and lepton production in UPC PbPb @ 5.02 TeV at CMS, PHANC'25, Puri, India.
+      </li>
+
+      <li>
+        <strong>2024</strong> – Radiation hardness study of MALTA2 sensor, DAE-BRNS Symposium 2024, IIT BHU, Varanasi, India.
+      </li>
+
+      <li>
+        <strong>2024</strong> – Measurement of the tau g−2 factor in ultraperipheral PbPb collisions recorded by the CMS experiment, DAE-BRNS Symposium 2024, IIT BHU, India.
+      </li>
+          
+      <li>
+        <strong>2024</strong> – Exclusive photon and lepton production in UPC PbPb @5.02TeV at CMS, PPC 2024)}, IIT Hyderabad, India. 
+      </li>
+
+      <li>
+        <strong>2024</strong> – Measurement of Breit-Wheeler process, light-by-light scattering and searches for axion-like particles in UPC PbPb @ 5.02 TeV at CMS, HardProbes 2024, Nagasaki, Japan.
+      </li>
+
+      <li>
+        <strong>2024</strong> – Participated in Experimental High Energy Particle Physics School on software development school at TIFR Mumbai, India.
+      </li>
+          
+      <li>
+        <strong>2023</strong> – Exclusive production in UPC PbPb collisions, Heavy Ion Physics Workshop, ECT*, Trento, Italy.
+      </li>
+
+      <li>
+        <strong>2023</strong>  Measurement of the tau g-2 factor in ultraperipheral PbPb collisions at CMS experiment", Speaker at In-House Symposium at Department of Physics, IIT Madras, India.
+      </li>
+          
+      <li>
+        <strong>2022</strong> – Observation of γγ → ττ production in PbPb collisions with the CMS experiment, DAE-BRNS HEP Symposium 2022, IISER Mohali, India.
+      </li>
+         <strong>2022</strong> – Measurement of the tau g-2 factor in ultraperipheral PbPb collisions at CMS experiment using electron+muon decay channel, presented poster at AEPSHEP2022 at Pyeongchang (Korea, Republic Of).
+      <li>
+        <strong>2022</strong> – Observation of γγ → ττ production in PbPb collisions with the CMS experiment, DAE-BRNS HEP Symposium 2022, IISER Mohali, India.
+      </li>
+
+      <li>
+        <strong>2019</strong> – Participated in summer School on Quantum Information and Technology (QIQT2019)} at IISER Kolkata, India
+      </li>
+     
+    </ul>
+
+    </div>
+
+  </section>
+
+  <!-- HOBBIES -->
+
+  <section id="hobbies">
+
+    <h2>Hobbies & Interests</h2>
+
+    <div class="Hobbies & Interests">
+
+        <h3>Painting</h3>
+        <p>
+          Example text about photography and travel interests.
+        </p>
+      
+        <h3>Reading</h3>
+        <p>
+          Example text about programming, AI, and scientific computing.
+        </p>
+
+        <h3>Gardening</h3>
+        <p>
+          Example text about books, science outreach, and learning.
+        </p>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact">
+
+    <h2>Contact</h2>
+
+    <p>Email: tukupranati@gmail.com</p>
+
+    <p>GitHub: github.com/pranati-jana</p>
+
+    <p>LinkedIn: https://www.linkedin.com/in/pranati-jana-ba7825172/</p>
+
+    <a href="CV_PranatiJana.pdf" class="btn" target="_blank">Download CV</a>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Pranati Jana | Personal Academic Website
+  </footer>
+
+</body>
+</html>
+
